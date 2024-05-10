@@ -7,8 +7,16 @@ public class Calculadora {
         String linha = scan.nextLine();
 
         String[] valores = linha.split(" ");
-        Soma soma = new Soma();
-        int resultado = soma.somar(Integer.parseInt(valores[0]), Integer.parseInt(valores[2]));
-        System.out.println(resultado);
+        if(valores[1].equalsIgnoreCase("+")) {
+            Soma soma = new Soma();
+            int resultado = soma.somar(Integer.parseInt(valores[0]), Integer.parseInt(valores[2]));
+            System.out.println(resultado);
+        }
+
+        if(valores[1].equalsIgnoreCase("*")){
+            Multiplicacao multiplicacao = new Multiplicacao();
+            int resultado = multiplicacao.multiplicar(Integer.parseInt(valores[0]), Integer.parseInt(valores[2]));
+            System.out.println(resultado);
+        }
     }
 }
