@@ -19,5 +19,10 @@ public class Calculadora {
 			int resultadoSubtracao = subtracao.subtrair(Integer.parseInt(valores[0]), Integer.parseInt(valores[2]));
 			System.out.println(resultadoSubtracao);
 		}
-	}
+    if(valores[1].equalsIgnoreCase("*")){
+            Multiplicacao multiplicacao = new Multiplicacao();
+            int resultado = multiplicacao.multiplicar(Integer.parseInt(valores[0]), Integer.parseInt(valores[2]));
+            System.out.println(resultado);
+    } 
+  }
 }
